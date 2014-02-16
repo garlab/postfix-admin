@@ -1,0 +1,14 @@
+{
+    "name": "momcards/postfix-admin",
+    "description": "Postfix Admin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anthony Garcia",
+            "email": "xinu@momcards.fr"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.*"
+    }
+}
