@@ -29,9 +29,9 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Alias</a></li>
-                <li><a href="#">Comptes</a></li>
-                <li><a href="#">Domaines</a></li>
+                <li><a href="/alias">Alias</a></li>
+                <li><a href="/comptes">Comptes</a></li>
+                <li><a href="/domaines">Domaines</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                   <ul class="dropdown-menu">
