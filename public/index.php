@@ -23,4 +23,16 @@ $app->get('/', function() use($app) {
     $app->render('home.php');
 });
 
+$app->get('/alias', function() use($app) {
+    $app->render('alias.php');
+});
+
+$app->get('/comptes', function() use($app) {
+    $app->render('comptes.php');
+});
+
+$app->get('/domaines', function() use($app) {
+    $app->render('domaines.php');
+});
+
 $app->run();
