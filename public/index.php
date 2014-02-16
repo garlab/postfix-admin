@@ -7,12 +7,20 @@ $app = new \Slim\Slim(array(
     'templates.path' => '../app/views'
 ));
 
-$app->get('/', function() use($app) {
-    $app->render('index.php');
+/* Hooks */
+
+$app->hook('slim.before.dispatch', function () use ($app) {
+	$app->render('header.php');
+});
+  
+$app->hook('slim.after.dispatch', function () use ($app) {
+	$app->render('footer.php');
 });
 
-$app->get('/domaines', function() use($app) {
-    echo $app->render('index.php');
+/* Routes */
+
+$app->get('/', function() use($app) {
+    $app->render('home.php');
 });
 
 $app->run();
