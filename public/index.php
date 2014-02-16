@@ -2,6 +2,13 @@
 
 require '../app/vendor/autoload.php';
 
+spl_autoload_register(function($class) {
+    $path = "../app/models/$class.php";
+    if (is_file($path)) {
+        require $path;
+    }
+});
+
 $app = new \Slim\Slim(array(
     'mode' => 'development',
     'templates.path' => '../app/views'
@@ -24,7 +31,8 @@ $app->get('/', function() use($app) {
 });
 
 $app->get('/alias', function() use($app) {
-    $app->render('alias.php');
+    $aliases = AliasDao::getAll();
+    $app->render('alias.php', array('aliases' => $aliases));
 });
 
 $app->get('/comptes', function() use($app) {
