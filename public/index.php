@@ -40,7 +40,8 @@ $app->get('/comptes', function() use($app) {
 });
 
 $app->get('/domaines', function() use($app) {
-    $app->render('domaines.php');
+    $domaines = DomainesDao::getAll();
+    $app->render('domaines.php', array('domaines' => $domaines));
 });
 
 $app->run();
