@@ -44,4 +44,10 @@ $app->get('/domaines', function() use($app) {
     $app->render('domaines.php', array('domaines' => $domaines));
 });
 
+$app->post('/domaines', function() use($app) {
+    $domaines = DomainesDao::getAll();
+    
+    $app->render('domaines.php', array('domaines' => $domaines, 'message' => 'Domain created.', 'error' => 'An error occured.'));
+});
+
 $app->run();
